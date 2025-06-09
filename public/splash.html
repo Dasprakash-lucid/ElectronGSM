@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Splash</title>
+  <style>
+    body {
+      margin: 0;
+      background: white;
+      font-family: sans-serif;
+      height: 100vh;
+      display: flex; /* 🧩 Makes body a flex container */
+      justify-content: center; /* ➡️ Center horizontally */
+      align-items: center;     /* ⬇️ Center vertically */
+    }
+
+    .loader {
+      font-weight: bold;
+      font-size: 30px;
+      padding-bottom: 8px;
+      background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+      animation: l2 2s linear infinite;
+    }
+
+    .loader::before {
+      content: "Loading...";
+    }
+
+    @keyframes l2 {
+      to {
+        background-size: 100% 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+</body>
+</html>

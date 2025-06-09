@@ -1,0 +1,58 @@
+{
+  "name": "cloudelectron",
+  "version": "1.0.0",
+  "main": "main.cjs",
+  "homepage": "https://dev-gsm.lucidtest.in",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder --linux --win",
+    "build:win": "electron-builder --win --x64 --ia32",
+    "build:linux": "electron-builder --linux",
+    "build:mac": "electron-builder --mac"
+  },
+  "keywords": [],
+  "author": "LUCID It Solutions",
+  "license": "ISC",
+  "description": "Electron desktop wrapper for LUCIDGSM cloud app",
+  "devDependencies": {
+    "electron": "^36.4.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.lucid.guestrequest",
+    "productName": "LUCIDGSM",
+    "copyright": "Copyright © 2025 Lucid",
+    "directories": {
+      "buildResources": "assets",
+      "output": "release"
+    },
+    "files": [
+      "dist",
+      "main.cjs",
+      "public"
+    ],
+    "extraMetadata": {
+      "main": "main.cjs"
+    },
+    "linux": {
+      "icon": "public/vite.png",
+      "maintainer": "LUCID It Solutions",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "public/vite.png"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "public/vite.png"
+    }
+  }
+}
